@@ -104,6 +104,25 @@ section {
   border-radius: 15px;
 }
 
+/* Project / Icon shared styles */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffd6e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+.icon-circle:hover {
+  transform: scale(1.2) rotate(10deg);
+  background: #ffeef6;
+}
+
 /* Projects Section */
 .projects {
   background-color: #fffafc;
@@ -126,23 +145,6 @@ section {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
-.project-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #ffd6e8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  margin: 0 auto 15px auto;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s;
-}
-.project-icon:hover {
-  transform: scale(1.2) rotate(10deg);
-  background: #ffeef6;
-}
 
 /* Cute Things Section */
 .cute-things {
@@ -156,33 +158,60 @@ section {
   margin-top: 20px;
   flex-wrap: wrap;
 }
+.cute-icons a i {
+  font-size: 2em;
+}
 .cute-icons a {
   text-decoration: none;
 }
-.cute-icons i {
-  width: 80px;
-  height: 80px;
+.cute-icons a i {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s, color 0.3s;
+  background: #ffd6e8;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   color: #ff69b4;
 }
-.cute-icons i:hover {
+.cute-icons a i:hover {
   transform: scale(1.2) rotate(10deg);
   background: #ffeef6;
   color: #ff1493;
 }
 
-/* Footer */
+/* Footer / Contact */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   font-size: 0.9em;
   color: #888;
+  background-color: #ffd6e8;
+  border-top: 2px solid #ffb6c1;
+}
+footer .contact {
+  margin-bottom: 15px;
+}
+footer .contact a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+footer .contact a i {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffd6e8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #ff69b4;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+footer .contact a i:hover {
+  transform: scale(1.2) rotate(10deg);
+  background: #ffeef6;
+  color: #ff1493;
 }
