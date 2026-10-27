@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-    content="Jaelyn's creative technology portfolio featuring web development, UX/UI, AI projects, and tailored resumes.">
+    content="Jaelyn Rivera-Jacinto's portfolio showcasing web development, UX/UI interests, AI projects, technical skills, and creative work.">
 
   <title>Jaelyn's Little Corner ♡ | Portfolio</title>
 
@@ -24,7 +25,7 @@
 
 <body>
 
-  <!-- PASTEL BANNER -->
+  <!-- DECORATIVE BANNER -->
   <div class="banner" aria-hidden="true">
     <span>♡ ✿ ♡ ✿ ♡</span>
   </div>
@@ -46,11 +47,14 @@
 
     <ul id="navLinks">
       <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About Me</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#resumes">Résumés 🎀</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#journey">My Journey</a></li>
+      <li><a href="#resumes">Résumés</a></li>
       <li><a href="#github">GitHub</a></li>
+      <li><a href="#diary">Diary</a></li>
       <li><a href="#cute">Cute Things</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -90,11 +94,11 @@
       <p class="hero-description">
         I love bringing creative ideas to life through
         code, thoughtful design, and interactive experiences.
-        Welcome to my cozy coding corner! ♡
+        Explore my projects, learn about my journey,
+        and get to know the person behind the code!
       </p>
 
       <div class="hero-buttons">
-
         <a href="#projects" class="btn btn-primary">
           <i class="fas fa-laptop-code"></i>
           Explore My Work
@@ -105,14 +109,10 @@
           My Résumés
         </a>
 
-        <a href="https://github.com/riveraja97"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary">
-          <i class="fab fa-github"></i>
-          GitHub
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-envelope"></i>
+          Let's Connect
         </a>
-
       </div>
     </section>
 
@@ -128,49 +128,40 @@
       </div>
 
       <div class="about-content">
-
-        <p class="section-kicker">
-          a little introduction ♡
-        </p>
-
+        <p class="section-kicker">a little introduction ♡</p>
         <h2>About Me 🌸</h2>
 
         <p>
-          Hello! My name is Jaelyn. I'm a recent graduate with a Bachelor's
-          Degree who loves creating adorable, interactive,
-          and meaningful digital experiences.
+          Hello! My name is Jaelyn. I'm a student
+          passionate about technology, creativity,
+          and building meaningful digital experiences.
         </p>
 
         <p>
-          I enjoy combining creativity with technology,
-          whether I'm designing responsive websites,
-          developing browser games, or experimenting
-          with APIs and AI-powered applications.
+          I enjoy creating responsive websites,
+          interactive browser games, and applications
+          that connect users with useful technology.
+          I'm especially interested in how design,
+          research, and development work together.
         </p>
 
         <p>
-          I'm interested in UX/UI design, UX research,
-          web development, technology consulting,
-          cybersecurity, and AI communications.
-          I enjoy learning how technology can
-          solve problems and improve experiences.
+          I love learning new skills, collaborating
+          with others, and turning challenges into
+          opportunities to grow.
         </p>
-
       </div>
     </section>
 
     <!-- SKILLS -->
     <section class="skills section-card" id="skills">
 
-      <p class="section-kicker">
-        my developer toolkit
-      </p>
-
+      <p class="section-kicker">my growing toolkit</p>
       <h2>My Skills 🎀</h2>
 
       <p class="section-intro">
-        A growing collection of tools and technologies
-        I've been learning and using in my projects.
+        Technologies, tools, and strengths I've
+        developed through coursework and projects.
       </p>
 
       <div class="skills-grid">
@@ -201,13 +192,26 @@
 
         <div class="skill-group">
           <div class="skill-group-icon">🛠️</div>
-          <h3>Tools & Technologies</h3>
+          <h3>Tools & Technology</h3>
 
           <div class="skills-list">
             <span class="skill">GitHub</span>
             <span class="skill">VS Code</span>
             <span class="skill">Cloudflare Workers</span>
             <span class="skill">AI Integration</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-icon">🌷</div>
+          <h3>Professional Strengths</h3>
+
+          <div class="skills-list">
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Collaboration</span>
+            <span class="skill">Adaptability</span>
+            <span class="skill">Communication</span>
+            <span class="skill">Attention to Detail</span>
           </div>
         </div>
 
@@ -224,15 +228,106 @@
       <h2>Featured Projects 💻💖</h2>
 
       <p class="section-intro">
-        These are some of my favorite projects!
-        Each one represents something new I've
-        learned along my coding journey.
+        Some of my favorite projects, combining
+        creative design and technical problem-solving.
       </p>
 
-      <div class="projects-grid"
-        id="featuredProjects">
-      </div>
+      <div class="projects-grid" id="featuredProjects"></div>
+    </section>
 
+    <!-- PROJECT CASE STUDIES -->
+    <section class="case-studies section-card" id="case-studies">
+
+      <p class="section-kicker">
+        the stories behind my projects
+      </p>
+
+      <h2>Behind the Code 🔎💗</h2>
+
+      <p class="section-intro">
+        Every project has a story! Explore the
+        challenges, decisions, and lessons
+        behind some of my work.
+      </p>
+
+      <div class="case-grid" id="caseStudyGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION TIMELINE -->
+    <section class="journey section-card" id="journey">
+
+      <p class="section-kicker">
+        learning, growing, and exploring
+      </p>
+
+      <h2>My Journey 🎓🌷</h2>
+
+      <p class="section-intro">
+        A glimpse into my educational experiences,
+        projects, and professional development.
+      </p>
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-marker">🎓</div>
+          <div class="timeline-content">
+            <span class="timeline-date">Education</span>
+            <h3>My College Journey</h3>
+            <p>
+              Building my technical foundation through
+              programming, web development, and
+              hands-on projects while exploring
+              different technology career paths.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">🌎</div>
+          <div class="timeline-content">
+            <span class="timeline-date">
+              Professional Development
+            </span>
+            <h3>Global Career Accelerator</h3>
+            <p>
+              Participated in collaborative learning
+              experiences focused on technical projects,
+              communication, teamwork, and
+              intercultural competencies.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">💻</div>
+          <div class="timeline-content">
+            <span class="timeline-date">Project Experience</span>
+            <h3>Web Development & AI Projects</h3>
+            <p>
+              Developed interactive websites, browser
+              games, and API-powered applications,
+              strengthening my skills in JavaScript,
+              debugging, and user-focused design.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-marker">✨</div>
+          <div class="timeline-content">
+            <span class="timeline-date">What's Next</span>
+            <h3>Continuing My Career Journey</h3>
+            <p>
+              Exploring opportunities to contribute
+              to meaningful technology projects,
+              learn from professionals, and grow
+              through hands-on experience.
+            </p>
+          </div>
+        </article>
+
+      </div>
     </section>
 
     <!-- RESUME CLOSET -->
@@ -246,24 +341,16 @@
 
       <p class="section-intro">
         Different roles, different strengths!
-        I've created tailored résumés to highlight
-        the skills and experiences most relevant
-        to each opportunity.
-        Feel free to explore! ♡
+        Choose the résumé that best matches
+        your opportunity. ♡
       </p>
 
       <div class="resume-grid">
 
-        <!-- UX/UI DESIGN -->
         <article class="resume-card">
           <div class="resume-icon">🎨</div>
-
           <h3>UX/UI Design</h3>
-
-          <p>
-            Design, usability & creative experiences
-          </p>
-
+          <p>Design, usability & creative experiences</p>
           <a href="resumes/ux-ui-design.pdf"
             download="Jaelyn_UXUI_Design_Resume.pdf"
             class="resume-btn">
@@ -272,16 +359,10 @@
           </a>
         </article>
 
-        <!-- UX RESEARCH -->
         <article class="resume-card">
           <div class="resume-icon">🔍</div>
-
           <h3>UX Research</h3>
-
-          <p>
-            User research, analysis & insights
-          </p>
-
+          <p>User research, analysis & insights</p>
           <a href="resumes/ux-research.pdf"
             download="Jaelyn_UX_Research_Resume.pdf"
             class="resume-btn">
@@ -290,16 +371,10 @@
           </a>
         </article>
 
-        <!-- WEB DEVELOPMENT -->
         <article class="resume-card">
           <div class="resume-icon">💻</div>
-
           <h3>Web Development</h3>
-
-          <p>
-            Frontend development & programming
-          </p>
-
+          <p>Frontend development & programming</p>
           <a href="resumes/web-development.pdf"
             download="Jaelyn_Web_Developer_Resume.pdf"
             class="resume-btn">
@@ -308,16 +383,10 @@
           </a>
         </article>
 
-        <!-- TECHNOLOGY CONSULTING -->
         <article class="resume-card">
           <div class="resume-icon">💼</div>
-
           <h3>Technology Consulting</h3>
-
-          <p>
-            Technology strategy & problem solving
-          </p>
-
+          <p>Technology strategy & problem solving</p>
           <a href="resumes/tech-consulting.pdf"
             download="Jaelyn_Tech_Consulting_Resume.pdf"
             class="resume-btn">
@@ -326,16 +395,10 @@
           </a>
         </article>
 
-        <!-- CYBERSECURITY -->
         <article class="resume-card">
           <div class="resume-icon">🔐</div>
-
           <h3>Cybersecurity</h3>
-
-          <p>
-            Security, technical analysis & systems
-          </p>
-
+          <p>Security, technical analysis & systems</p>
           <a href="resumes/cybersecurity.pdf"
             download="Jaelyn_Cybersecurity_Resume.pdf"
             class="resume-btn">
@@ -344,16 +407,10 @@
           </a>
         </article>
 
-        <!-- AI & TECH COMMUNICATIONS -->
         <article class="resume-card">
           <div class="resume-icon">🤖</div>
-
           <h3>AI & Tech Communications</h3>
-
-          <p>
-            AI, technology & communication
-          </p>
-
+          <p>AI, technology & communication</p>
           <a href="resumes/ai-tech-communications.pdf"
             download="Jaelyn_AI_Tech_Communications_Resume.pdf"
             class="resume-btn">
@@ -365,9 +422,8 @@
       </div>
     </section>
 
-    <!-- AUTOMATIC GITHUB PROJECTS -->
-    <section class="github-section section-card"
-      id="github">
+    <!-- AUTOMATIC GITHUB GALLERY -->
+    <section class="github-section section-card" id="github">
 
       <p class="section-kicker">
         more coding adventures
@@ -376,60 +432,41 @@
       <h2>More From My GitHub 🐱‍💻</h2>
 
       <p class="section-intro">
-        This gallery automatically displays my
-        public GitHub repositories.
-        Feel free to explore what I've been
-        working on!
+        Automatically displaying my public
+        GitHub repositories.
       </p>
 
       <div class="github-toolbar">
 
         <label class="search-wrapper">
           <i class="fas fa-search"></i>
-
-          <span class="sr-only">
-            Search repositories
-          </span>
-
+          <span class="sr-only">Search repositories</span>
           <input type="search"
             id="repoSearch"
             placeholder="Search my repositories...">
         </label>
 
         <label class="sort-wrapper">
-
-          <span class="sr-only">
-            Sort repositories
-          </span>
-
+          <span class="sr-only">Sort repositories</span>
           <select id="repoSort">
-            <option value="updated">
-              Recently Updated
-            </option>
-            <option value="name">
-              Name A–Z
-            </option>
-            <option value="stars">
-              Most Stars
-            </option>
+            <option value="updated">Recently Updated</option>
+            <option value="name">Name A–Z</option>
+            <option value="stars">Most Stars</option>
           </select>
-
         </label>
+
       </div>
 
-      <p class="github-status"
-        id="githubStatus"
+      <p id="githubStatus"
+        class="github-status"
         role="status"
         aria-live="polite">
-        Loading GitHub repositories... ♡
+        Loading repositories... ♡
       </p>
 
-      <div class="github-grid"
-        id="githubProjects">
-      </div>
+      <div id="githubProjects" class="github-grid"></div>
 
       <div class="github-actions">
-
         <button id="showMoreBtn"
           class="btn btn-secondary"
           type="button"
@@ -444,8 +481,26 @@
           <i class="fab fa-github"></i>
           Visit My GitHub
         </a>
-
       </div>
+
+    </section>
+
+    <!-- DEVELOPER DIARY -->
+    <section class="diary section-card" id="diary">
+
+      <p class="section-kicker">
+        notes from my coding journey
+      </p>
+
+      <h2>Developer Diary 📖🌸</h2>
+
+      <p class="section-intro">
+        A little collection of lessons,
+        discoveries, and reflections
+        from my projects.
+      </p>
+
+      <div class="diary-grid" id="diaryGrid"></div>
     </section>
 
     <!-- CUTE THINGS -->
@@ -468,7 +523,7 @@
         <a href="https://www.google.com/search?tbm=isch&q=cute+cats"
           target="_blank"
           rel="noopener noreferrer"
-          class="cute-icon cat"
+          class="cute-icon"
           aria-label="Cute cats">
           <i class="fa-solid fa-cat"></i>
           <span>Cats</span>
@@ -477,7 +532,7 @@
         <a href="https://www.google.com/search?tbm=isch&q=cute+animal+paws"
           target="_blank"
           rel="noopener noreferrer"
-          class="cute-icon paw"
+          class="cute-icon"
           aria-label="Cute animal paws">
           <i class="fa-solid fa-paw"></i>
           <span>Paws</span>
@@ -486,7 +541,7 @@
         <a href="https://www.google.com/search?tbm=isch&q=cute+puppies"
           target="_blank"
           rel="noopener noreferrer"
-          class="cute-icon dog"
+          class="cute-icon"
           aria-label="Cute puppies">
           <i class="fa-solid fa-dog"></i>
           <span>Puppies</span>
@@ -495,44 +550,69 @@
       </div>
     </section>
 
+    <!-- CONTACT / HIRE ME -->
+    <section class="contact-section section-card" id="contact">
+
+      <p class="section-kicker">
+        let's create something meaningful
+      </p>
+
+      <h2>Let's Connect! 💌</h2>
+
+      <p class="section-intro">
+        Interested in connecting, collaborating,
+        or discussing a professional opportunity?
+        I'd love to hear from you!
+      </p>
+
+      <div class="contact-grid">
+
+        <a href="https://www.linkedin.com/in/jaelyn-rivera-jacinto/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card">
+          <i class="fab fa-linkedin"></i>
+          <h3>LinkedIn</h3>
+          <p>Let's connect professionally</p>
+          <span>Visit Profile ↗</span>
+        </a>
+
+        <a href="https://github.com/riveraja97"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card">
+          <i class="fab fa-github"></i>
+          <h3>GitHub</h3>
+          <p>Explore my code and projects</p>
+          <span>View GitHub ↗</span>
+        </a>
+
+        <a href="#resumes" class="contact-card">
+          <i class="fas fa-file-pdf"></i>
+          <h3>My Résumés</h3>
+          <p>Find the right résumé for your role</p>
+          <span>Browse Résumés ♡</span>
+        </a>
+
+      </div>
+
+      <p class="contact-note">
+        ✨ Thank you for considering my work!
+      </p>
+    </section>
+
   </main>
 
-  <!-- FOOTER / CONTACT -->
-  <footer id="contact">
-
-    <h2>Let's Connect! 💌</h2>
-
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with love, code & pastel colors 💕</p>
     <p>
-      Thanks for visiting my little corner
-      of the internet. I'm always excited
-      to connect and learn!
-    </p>
-
-    <div class="contact-links">
-
-      <a href="https://www.linkedin.com/in/jaelyn-rivera-jacinto/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn profile">
-        <i class="fab fa-linkedin"></i>
-      </a>
-
-      <a href="https://github.com/riveraja97"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub profile">
-        <i class="fab fa-github"></i>
-      </a>
-
-    </div>
-
-    <p class="footer-bottom">
-      Made with love, code & pastel colors 💕
-      <br>
       © <span id="currentYear"></span>
       Jaelyn Rivera-Jacinto
     </p>
-
+    <a href="#hero" class="back-to-top">
+      Back to Top ↑
+    </a>
   </footer>
 
 </body>
