@@ -1,7 +1,7 @@
 
-/* ==========================
-   JAELYN'S PASTEL PORTFOLIO
-   ========================== */
+/* =====================================
+   JAELYN'S PASTEL PORTFOLIO ♡
+   ===================================== */
 
 :root {
   --pink: #ff69b4;
@@ -16,6 +16,8 @@
   --white: #ffffff;
   --shadow: 0 8px 25px rgba(214, 99, 152, 0.12);
 }
+
+/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -36,10 +38,6 @@ body {
 
 button, input, select {
   font: inherit;
-}
-
-button, a {
-  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -69,7 +67,7 @@ section {
 }
 
 .section-card {
-  background: var(--white);
+  background: white;
   border: 2px solid #ffe0ed;
   border-radius: 28px;
   box-shadow: var(--shadow);
@@ -103,9 +101,7 @@ section {
   border: 0;
 }
 
-/* ==========================
-   BANNER
-   ========================== */
+/* BANNER */
 
 .banner {
   height: 220px;
@@ -129,9 +125,7 @@ section {
   text-shadow: 0 3px 10px #d66d9c;
 }
 
-/* ==========================
-   NAVIGATION
-   ========================== */
+/* NAVIGATION */
 
 .navbar {
   position: sticky;
@@ -144,7 +138,7 @@ section {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 14px max(25px, calc((100% - 1150px) / 2));
+  padding: 14px 25px;
   backdrop-filter: blur(12px);
 }
 
@@ -162,7 +156,7 @@ section {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 16px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -170,7 +164,7 @@ section {
 
 .navbar li a {
   color: #b65385;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 800;
   text-decoration: none;
   transition: color 0.2s;
@@ -189,19 +183,16 @@ section {
   cursor: pointer;
 }
 
-/* ==========================
-   HERO
-   ========================== */
+/* HERO */
 
 .hero {
   max-width: 100%;
   margin: 0 auto 45px;
-  padding: 90px 25px;
+  padding: 85px 25px;
   text-align: center;
   background: linear-gradient(
     180deg,
     #ffd6e8 0%,
-    #ffeef6 75%,
     #ffeef6 100%
   );
 }
@@ -231,9 +222,22 @@ section {
 }
 
 .hero-subtitle {
-  color: #9d4f7b;
-  font-size: 1.1rem;
+  color: #a34f7e;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 2;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.hero-traits {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e95d9d;
+  font-size: 0.95rem;
   font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
 .hero-description {
@@ -249,9 +253,7 @@ section {
   gap: 15px;
 }
 
-/* ==========================
-   BUTTONS
-   ========================== */
+/* BUTTONS */
 
 .btn {
   display: inline-flex;
@@ -310,9 +312,7 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
-/* ==========================
-   ABOUT ME
-   ========================== */
+/* ABOUT ME */
 
 .about {
   display: flex;
@@ -363,9 +363,7 @@ select:focus-visible {
   color: #6e5c69;
 }
 
-/* ==========================
-   SKILLS
-   ========================== */
+/* SKILLS */
 
 .skills {
   background: #fff2f8;
@@ -411,9 +409,7 @@ select:focus-visible {
   font-weight: 800;
 }
 
-/* ==========================
-   FEATURED PROJECTS
-   ========================== */
+/* FEATURED PROJECTS */
 
 .projects {
   background: #fffafc;
@@ -432,9 +428,7 @@ select:focus-visible {
   border-radius: 22px;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(255, 105, 180, 0.08);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
@@ -468,7 +462,6 @@ select:focus-visible {
 .project-card p {
   color: #70606b;
   font-size: 0.92rem;
-  line-height: 1.7;
 }
 
 .project-tags {
@@ -500,9 +493,83 @@ select:focus-visible {
   font-style: italic;
 }
 
-/* ==========================
-   GITHUB REPOSITORIES
-   ========================== */
+/* RESUME CLOSET */
+
+.resumes {
+  background: #fff5fa;
+  text-align: center;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.resume-card {
+  background: white;
+  border: 2px solid #ffd1e5;
+  border-radius: 22px;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(255, 105, 180, 0.18);
+}
+
+.resume-icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffe0ee, #f4e5ff);
+  border-radius: 50%;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.resume-card h3 {
+  color: #d65392;
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.resume-card p {
+  color: #806c7a;
+  font-size: 0.85rem;
+  flex-grow: 1;
+  margin-bottom: 22px;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ed4e98;
+  color: white;
+  text-decoration: none;
+  padding: 11px 17px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.resume-btn:hover {
+  background: #cf337c;
+  transform: scale(1.05);
+}
+
+/* AUTOMATIC GITHUB SECTION */
 
 .github-section {
   background: #fff8fc;
@@ -626,10 +693,6 @@ select:focus-visible {
   margin-bottom: 20px;
 }
 
-.repo-meta i {
-  margin-right: 4px;
-}
-
 .repo-card .project-links {
   margin-top: auto;
 }
@@ -647,9 +710,7 @@ select:focus-visible {
   display: none !important;
 }
 
-/* ==========================
-   CUTE THINGS
-   ========================== */
+/* CUTE THINGS */
 
 .cute-things {
   background: #ffe4f0;
@@ -691,9 +752,7 @@ select:focus-visible {
   background: #fff4fb;
 }
 
-/* ==========================
-   FOOTER
-   ========================== */
+/* FOOTER */
 
 footer {
   margin-top: 65px;
@@ -744,27 +803,23 @@ footer > p {
   font-size: 0.85rem;
 }
 
-/* ==========================
-   ANIMATIONS
-   ========================== */
+/* ANIMATIONS */
 
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-8px);
   }
 }
 
-/* ==========================
-   RESPONSIVE DESIGN
-   ========================== */
+/* TABLETS */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 15px 22px;
   }
 
   .menu-toggle {
@@ -792,7 +847,13 @@ footer > p {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+
+  .resume-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
+
+/* MOBILE */
 
 @media (max-width: 700px) {
   section {
@@ -808,6 +869,11 @@ footer > p {
   .hero {
     width: 100%;
     padding: 70px 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.9;
   }
 
   .about {
@@ -835,6 +901,18 @@ footer > p {
     height: 170px;
   }
 }
+
+@media (max-width: 550px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+}
+
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   html {

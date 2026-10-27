@@ -3,23 +3,23 @@
 // JAELYN'S PASTEL PORTFOLIO ♡
 // ============================================
 
-// YOUR GITHUB ACCOUNT
+// YOUR GITHUB USERNAME
 const GITHUB_USERNAME = "riveraja97";
 
 // ============================================
 // 1. FEATURED PROJECTS
 // ============================================
-// Change repo: null to your actual repository
-// name once you know it.
+// Replace repo: null with the actual
+// GitHub repository name.
 //
 // Example:
 // repo: "water-run"
 //
-// Add a screenshot using:
+// For screenshots:
 // image: "images/water-run.png"
 //
-// Add a deployed website using:
-// demo: "https://your-website-url.com"
+// For live demos:
+// demo: "https://your-live-website.com"
 
 const FEATURED_PROJECTS = [
   {
@@ -123,13 +123,13 @@ const showMoreBtn =
 
 let allRepositories = [];
 let visibleCount = 6;
+
 const PAGE_SIZE = 6;
 
 // ============================================
 // 3. HELPER FUNCTIONS
 // ============================================
 
-// Create a new HTML element safely
 function createElement(tag, className, text) {
   const element = document.createElement(tag);
 
@@ -144,7 +144,6 @@ function createElement(tag, className, text) {
   return element;
 }
 
-// Make external links
 function createLink(text, url, iconClass, styleClass) {
   const link = createElement(
     "a",
@@ -169,7 +168,7 @@ function createLink(text, url, iconClass, styleClass) {
 }
 
 // ============================================
-// 4. RENDER FEATURED PROJECTS
+// 4. FEATURED PROJECT CARDS
 // ============================================
 
 function renderFeaturedProjects() {
@@ -181,7 +180,6 @@ function renderFeaturedProjects() {
       "project-card"
     );
 
-    // Image or emoji placeholder
     const imageBox = createElement(
       "div",
       "project-image"
@@ -194,8 +192,6 @@ function renderFeaturedProjects() {
       image.alt = "Screenshot of " + project.title;
       image.loading = "lazy";
 
-      // If the screenshot cannot load,
-      // display the emoji instead.
       image.addEventListener("error", () => {
         imageBox.replaceChildren();
         imageBox.textContent = project.emoji;
@@ -208,7 +204,6 @@ function renderFeaturedProjects() {
 
     card.appendChild(imageBox);
 
-    // Project title
     const title = createElement(
       "h3",
       "",
@@ -217,7 +212,6 @@ function renderFeaturedProjects() {
 
     card.appendChild(title);
 
-    // Project description
     const description = createElement(
       "p",
       "",
@@ -226,7 +220,6 @@ function renderFeaturedProjects() {
 
     card.appendChild(description);
 
-    // Technology tags
     const tags = createElement(
       "div",
       "project-tags"
@@ -240,7 +233,6 @@ function renderFeaturedProjects() {
 
     card.appendChild(tags);
 
-    // GitHub and live demo buttons
     const links = createElement(
       "div",
       "project-links"
@@ -290,7 +282,7 @@ function renderFeaturedProjects() {
 }
 
 // ============================================
-// 5. FETCH GITHUB REPOSITORIES
+// 5. FETCH PUBLIC GITHUB REPOSITORIES
 // ============================================
 
 async function fetchGitHubProjects() {
@@ -304,9 +296,7 @@ async function fetchGitHubProjects() {
     let repositories = [];
     let page = 1;
 
-    // GitHub returns a maximum of 100
-    // repositories per request.
-    // Fetch up to 5 pages.
+    // Fetch up to 500 public repositories
     while (page <= 5) {
       const apiUrl =
         "https://api.github.com/users/" +
@@ -322,8 +312,10 @@ async function fetchGitHubProjects() {
       });
 
       if (!response.ok) {
-        if (response.status === 403 ||
-            response.status === 429) {
+        if (
+          response.status === 403 ||
+          response.status === 429
+        ) {
           throw new Error(
             "GitHub's API rate limit was reached. " +
             "Please try again later."
@@ -353,25 +345,18 @@ async function fetchGitHubProjects() {
       page++;
     }
 
-    // Exclude repositories that are:
-    // - forks
-    // - archived
-    // - already featured
+    // Avoid duplicates of featured projects
     const featuredNames = new Set(
       FEATURED_PROJECTS
         .filter(project => project.repo)
-        .map(project =>
-          project.repo.toLowerCase()
-        )
+        .map(project => project.repo.toLowerCase())
     );
 
     allRepositories = repositories.filter(repo => {
       return (
         !repo.fork &&
         !repo.archived &&
-        !featuredNames.has(
-          repo.name.toLowerCase()
-        )
+        !featuredNames.has(repo.name.toLowerCase())
       );
     });
 
@@ -379,10 +364,7 @@ async function fetchGitHubProjects() {
     renderGitHubProjects();
 
   } catch (error) {
-    console.error(
-      "GitHub API error:",
-      error
-    );
+    console.error("GitHub API error:", error);
 
     githubStatus.textContent =
       error.message ||
@@ -393,7 +375,7 @@ async function fetchGitHubProjects() {
 }
 
 // ============================================
-// 6. RENDER GITHUB REPOSITORIES
+// 6. DISPLAY GITHUB REPOSITORIES
 // ============================================
 
 function renderGitHubProjects() {
@@ -402,7 +384,6 @@ function renderGitHubProjects() {
 
   const sortBy = sortSelect.value;
 
-  // Search repositories
   let filtered = allRepositories.filter(repo => {
     const name = repo.name.toLowerCase();
 
@@ -419,17 +400,14 @@ function renderGitHubProjects() {
     );
   });
 
-  // Sort repositories
+  // Sorting
   filtered.sort((a, b) => {
     if (sortBy === "name") {
       return a.name.localeCompare(b.name);
     }
 
     if (sortBy === "stars") {
-      return (
-        b.stargazers_count -
-        a.stargazers_count
-      );
+      return b.stargazers_count - a.stargazers_count;
     }
 
     return (
@@ -459,7 +437,6 @@ function renderGitHubProjects() {
       "repo-card"
     );
 
-    // Top row
     const top = createElement(
       "div",
       "repo-card-top"
@@ -488,7 +465,6 @@ function renderGitHubProjects() {
     top.appendChild(name);
     card.appendChild(top);
 
-    // Description
     const description = createElement(
       "p",
       "repo-description",
@@ -498,7 +474,6 @@ function renderGitHubProjects() {
 
     card.appendChild(description);
 
-    // Repository metadata
     const meta = createElement(
       "div",
       "repo-meta"
@@ -520,8 +495,7 @@ function renderGitHubProjects() {
       "span",
       "",
       "Updated " +
-      new Date(repo.updated_at)
-        .toLocaleDateString()
+      new Date(repo.updated_at).toLocaleDateString()
     );
 
     meta.appendChild(language);
@@ -530,7 +504,6 @@ function renderGitHubProjects() {
 
     card.appendChild(meta);
 
-    // Repository buttons
     const links = createElement(
       "div",
       "project-links"
@@ -545,7 +518,6 @@ function renderGitHubProjects() {
       )
     );
 
-    // Show demo if GitHub has a homepage URL
     if (
       repo.homepage &&
       /^https?:\/\//i.test(repo.homepage)
@@ -590,7 +562,7 @@ sortSelect.addEventListener("change", () => {
 });
 
 // ============================================
-// 8. SHOW MORE BUTTON
+// 8. SHOW MORE
 // ============================================
 
 showMoreBtn.addEventListener("click", () => {
@@ -622,7 +594,6 @@ menuToggle.addEventListener("click", () => {
     : '<i class="fas fa-bars"></i>';
 });
 
-// Close mobile menu after selecting a link
 navLinks.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
@@ -645,7 +616,7 @@ document.getElementById("currentYear")
   .textContent = new Date().getFullYear();
 
 // ============================================
-// 11. INITIALIZE PORTFOLIO
+// 11. INITIALIZE WEBSITE
 // ============================================
 
 renderFeaturedProjects();
